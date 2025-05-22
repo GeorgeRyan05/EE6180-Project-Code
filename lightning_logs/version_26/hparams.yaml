@@ -1,0 +1,16 @@
+checkpoint: microsoft/Phi-4-mini-instruct
+in_files:
+- outputs/Blip2__Salesforce__blip2-flan-t5-xxl.tsv
+- outputs/Llama3.2__meta-llama__Llama-3.2-11b-Vision-Instruct.tsv
+- outputs/Qwen2.5__Qwen__Qwen-2.5-Omni-7B.tsv
+- outputs/Phi4__microsoft__Phi-4-multimodal-instruct.tsv
+name: Phi4Ensemble
+out_file: outputs/Phi4Ensemble__microsoft__Phi-4-mini-instruct__14.tsv
+prompt: 'Summarize the following captions for a scene in an Indian movie:
+
+  {captions}
+
+  Only include information supported by 2 or more captions, do not repeat information,
+  and ignore information stating that the scene is in a movie.
+
+  '

@@ -1,0 +1,16 @@
+checkpoint: microsoft/Phi-4-multimodal-instruct
+name: Phi4Sam
+out_file: outputs/Phi4Sam__microsoft__Phi-4-multimodal-instruct.tsv
+prompt: '<|user|><|image_1|>This image depicts a scene from an Indian movie.
+
+  Do not attempt to guess the name of the movie, or comment on the fact that it is
+  a movie.
+
+  The following objects have been identified in the image:
+
+  {sam_outputs}
+
+  Describe the scene in detail, including the characters, their actions and clothing,
+  and the setting.
+
+  <|end|><|assistant|>'

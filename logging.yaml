@@ -1,0 +1,32 @@
+version: 1
+formatters:
+  simple:
+    format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+handlers:
+  file:
+    class: logging.FileHandler
+    filename: .logs/main.log
+    level: DEBUG
+    formatter: simple
+    mode: w
+    filters: [duplicate]
+  console:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: simple
+filters:
+  duplicate:
+    # (): __main__.DuplicateFilter
+    (): image_captioning_with_blip.logging_utils.DuplicateFilter
+root:
+  level: WARNING
+  handlers: [console]
+loggers:
+  __main__:
+    level: DEBUG
+    handlers: [file]
+    propagate: no
+  image_captioning_with_blip:
+    level: DEBUG
+    handlers: [file]
+    propagate: no

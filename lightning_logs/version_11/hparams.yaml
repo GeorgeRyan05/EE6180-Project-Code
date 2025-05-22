@@ -1,0 +1,91 @@
+checkpoint: microsoft/Phi-4-mini-instruct
+in_files: []
+name: Phi4Ensemble
+out_file: outputs/Phi4Ensemble__microsoft__Phi-4-mini-instruct__1__2.tsv
+prompt: 'You are a helpful assistant. Your job is to gather common information from
+  multiple captions and summarize it into a single caption.
+
+  The captions describe a scene from an Indian movie, and should describe the characters,
+  their actions and clothing, and the setting.
+
+  For each caption, split it into a list of facts. Then, for your final caption, include
+  all the facts supported by 2 or more captions.
+
+  If a fact is only supported by one caption, include it only if it fits well with
+  the other facts. Remove any information stating that the image is from a movie or
+  guessing the movie name.
+
+  If contradictory information is present, include the most common one. The user will
+  give captions in a list.
+
+  For example, if the captions are:
+
+  1. A man in a helmet and armor is holding a sword in his right hand. He is wearing
+  a brown tunic and a chainmail shirt. He is surrounded by a group of men who are
+  also wearing helmets and armor. They are holding flags. The scene is set in a battlefield.
+
+  2. The image depicts a scene from a video game or animation featuring a group of
+  warriors. The central figure is a knight in full armor, holding a sword aloft, with
+  a determined expression. Behind him, a line of similarly armored soldiers, each
+  holding a sword, stands ready for battle. The background suggests a twilight or
+  dawn setting, with a gradient of dark to light colors, possibly indicating the time
+  of day. The overall atmosphere is one of preparation for combat.
+
+  3. A man in armor with swords in front of a group of people
+
+  The facts are:
+
+  Image 1:
+
+  - A man in a helmet and armor is holding a sword in his right hand.
+
+  - He is wearing a brown tunic and a chainmail shirt.
+
+  - He is surrounded by a group of men who are also wearing helmets and armor.
+
+  - They are holding flags.
+
+  - The scene is set in a battlefield.
+
+  Image 2:
+
+  - Scene is from a video game or animation
+
+  - Group of warriors is present
+
+  - Central figure is a knight in full armor
+
+  - Knight is holding a sword aloft
+
+  - Knight has a determined expression
+
+  - Background suggests a twilight or dawn setting, with a gradient of dark to light
+  colors
+
+  - The atmosphere is one of preparation for combat
+
+  Image 3:
+
+  - A group of people is present
+
+  - An man in armor with swords is present
+
+  - The man in armor is in front of the group
+
+
+  The final caption should be:
+
+  Caption:
+
+  The image depicts a group of soldiers in helmets and armor, preparing for battle.
+
+  The setting is dawn or twilight.
+
+  The soldiers are dressed in traditional Indian military uniforms.
+
+  A knight in full armor stands in front of them, holding a sword aloft with a determined
+  expression.
+
+  One of the soldiers is holding a torch.
+
+  '

@@ -1,0 +1,28 @@
+BajiraoMastani
+mastani
+*venv*
+*.venv*
+*.envrc
+__pycache__
+*.pyc
+*.pyo
+*.zip
+*.tar
+*.tar.gz
+*.pt
+__MACOSX
+.DS_Store
+*Zone.Identifier
+Cache
+.cache
+*.env
+*.lock
+downloaded_images
+data_subset
+nltk_data
+# outputs
+.pyenv
+.logs/*
+# *.tsv
+*.txt
+# lightning_logs

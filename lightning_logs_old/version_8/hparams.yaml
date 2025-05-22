@@ -1,0 +1,5 @@
+checkpoint: microsoft/Phi-4-multimodal-instruct
+name: Phi4
+out_file: outputs/Phi4__microsoft__Phi-4-multimodal-instruct__1.tsv
+prompt: <|user|><|image_1|>What is shown in this image?<|end|><|assistant|>
+# Actually this is the movie prompt, I messed up the prompt in the model, but the dataset prompt is what actually matters

@@ -1,0 +1,48 @@
+[project]
+name = "image-captioning-with-blip"
+# packages = [{include="image-captioning-with-blip"}]
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "GeorgeRyan05",email = "122216046+GeorgeRyan05@users.noreply.github.com"}
+]
+requires-python = ">=3.12,<4.0"
+dependencies = [
+    "torch>=2.6.0",
+    "torchvision>=0.21.0",
+    "torchaudio>=2.6.0",
+    "lightning>=2.5.1" ,
+    "wget>=3.2",
+    "ipykernel>=6.0",
+    "transformers==4.51",
+    # "wandb>=0.19",
+    "python-dotenv>=1.1.0",
+    "evaluate>=0.4.3",
+    "nltk>=0.9.1",
+    "rouge_score>=0.1.2",
+    "bert_score>=0.3.13",
+    "sacrebleu>=2.5.1",
+    "soundfile (>=0.13.1,<0.14.0)",
+    "accelerate (>=1.7.0,<2.0.0)",
+    # "flash_attn (>=2.7.4)"
+    "peft (>=0.15.2,<0.16.0)",
+    "backoff (>=2.2.1,<3.0.0)",
+    "scipy>=1.15.0"
+]
+
+[project.scripts]
+human_eval = "image_captioning_with_blip.utils.human_eval:main"
+
+[tool.poetry.dependencies]
+torch = {source = "torch"}
+torchvision = {source = "torch"}
+torchaudio = {source = "torch"}
+
+[[tool.poetry.source]]
+name = "torch"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
